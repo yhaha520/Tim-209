@@ -1,3 +1,3 @@
-a = "abc"
-for x in a:
-    print(x)
+a = list(range(20))
+print(a)
+print(a[::2])

@@ -1,26 +1,25 @@
-import matplotlib.pyplot as plt
 import numpy as np
 from sklearn import datasets, linear_model
 from sklearn.metrics import mean_squared_error, r2_score
+import pandas as pd
 
+df = pd.read_csv(open('auto-mpg.csv', "rb"), usecols=range(8))
+# ['mpg', 'cylinders', 'displacement', 'horsepower', 'weight', 'acceleration', 'model year', 'origin']
+df = df[~df['horsepower'].isin(['?'])]   # [392 rows x 8 columns]
 
-diabetes = datasets.load_diabetes()
+label = df['mpg'].values  # (392,1)
+data = df.drop(['mpg'], axis=1).values  # (392, 7)
 
-diabetes_data = diabetes.data  # (442, 10)
-diabetes_label = diabetes.target  # (442,)
+size = len(data)
 
-size = len(diabetes_data) # 442
-# Use only one feature
-# print(diabetes_data[:, np.newaxis, 2:4])
-random_diabetes_data = np.empty(diabetes_data.shape, dtype=diabetes_data.dtype)
-random_diabetes_label = np.empty(diabetes_label.shape, dtype=diabetes_label.dtype)
-
+random_auto_data = np.empty(data.shape, dtype=data.dtype)
+random_auto_label = np.empty(label.shape, dtype=label.dtype)
 index = np.random.permutation(np.arange(size))
 
 # random shuffle the origin dataset to cross-validation
 for i in range(len(index)):
-    random_diabetes_data[i] = diabetes_data[index[i]]
-    random_diabetes_label[i] = diabetes_label[index[i]]
+    random_auto_data[i] = data[index[i]]
+    random_auto_label[i] = label[index[i]]
 
 k = 5
 intervals = int(size/k)
@@ -28,9 +27,9 @@ ave_LR_mse, ave_Lasso_mse, ave_Bayesian_mse = 0, 0, 0
 
 
 for i in range(1, k+1):  # each time in cv
-    x_test, y_test = random_diabetes_data[(i-1)*intervals:i*intervals], random_diabetes_label[(i-1)*intervals:i*intervals]
-    x_train = np.concatenate((random_diabetes_data[0:(i-1)*intervals], random_diabetes_data[i*intervals:size]), axis=0)
-    y_train = np.concatenate((random_diabetes_label[0:(i-1)*intervals], random_diabetes_label[i*intervals:size]), axis=0)
+    x_test, y_test = random_auto_data[(i-1)*intervals:i*intervals], random_auto_label[(i-1)*intervals:i*intervals]
+    x_train = np.concatenate((random_auto_data[0:(i-1)*intervals], random_auto_data[i*intervals:size]), axis=0)
+    y_train = np.concatenate((random_auto_label[0:(i-1)*intervals], random_auto_label[i*intervals:size]), axis=0)
 
     regr = linear_model.LinearRegression()
     regr.fit(x_train, y_train)
@@ -49,16 +48,16 @@ for i in range(1, k+1):  # each time in cv
     ave_Lasso_mse += mean_squared_error(y_test, diabetes_Lasso)
 
     regba = linear_model.BayesianRidge()
-    regba.fit(x_train,y_train)
+    regba.fit(x_train, y_train)
     diabetes_Bayesian = regba.predict(x_test)
     ave_Bayesian_mse += mean_squared_error(y_test,diabetes_Bayesian)
 
-    # # Plot outputs  (only works for 1-dimensional data)
-    # plt.scatter(x_test, y_test,  color='black')
-    # plt.plot(x_test, diabetes_y_pred, color='blue', linewidth=3)
-    # plt.xticks(())
-    # plt.yticks(())
-    # plt.show()
 print("LR Mean squared error is:", ave_LR_mse/k)
 print("Lasso Mean squared error is:", ave_Lasso_mse)
 print("Bayesian Regression Mean squared error is:", ave_Bayesian_mse)
+
+
+
+
+
+
