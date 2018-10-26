@@ -13,7 +13,7 @@ Output
 
 ## 2. Wine_data
 http://archive.ics.uci.edu/ml/datasets/Wine+Quality  
-Using chemical analysis determine the origin of wines, contains 178 instances. Attributes for each instances  
+Using chemical analysis determine the origin of wines, contains 178 instances. Attributes for each instance  
 1. fixed acidity   
 2. volatile acidity   
 3. citric acid  
@@ -25,12 +25,12 @@ Using chemical analysis determine the origin of wines, contains 178 instances. A
 9. pH   
 10. sulphates   
 11. alcohol   
-Output
+Output varibable
 12. quality (score between 0 and 10)  
 
 ## 3. Wine_Quality_data
 http://archive.ics.uci.edu/ml/datasets/Wine+Quality  
-I pick up red wine quality data, which has 1599 instances. Attributes for each instances  
+I pick up red wine quality data, which has 1599 instances. Attributes for each instance  
 1. fixed acidity
 2. volatile acidity
 3. citric acid
@@ -41,9 +41,21 @@ I pick up red wine quality data, which has 1599 instances. Attributes for each i
 8. density
 9. pH
 10. sulphates
-11. alcohol
-Output variable (based on sensory data): 
+11. alcohol  
+Output variable: 
 12. quality (score between 0 and 10)
+
+## 4. diabetes_data
+https://www4.stat.ncsu.edu/~boos/var.select/diabetes.html  
+This is scikit-learn linear regression test dataset, which contains 442 instances. Attributes for each instance  
+1. age 
+2. sex 
+3. body mass index
+4. average blood pressure
+5-10. six blood serum measurements  
+Output variable
+11. Y - quantitative measure of disease progression  
+
 
 
 
