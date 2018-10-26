@@ -51,11 +51,22 @@ This is scikit-learn linear regression test dataset, which contains 442 instance
 1. age 
 2. sex 
 3. body mass index
-4. average blood pressure
+4. average blood pressure  
 5-10. six blood serum measurements  
 Output variable
 11. Y - quantitative measure of disease progression  
 
-
+## 5. auto_mpg data
+http://archive.ics.uci.edu/ml/datasets/Auto+MPG  
+The data concerns city-cycle fuel consumption in miles per gallon, to be predicted in terms of 3 multivalued discrete and 5 continuous attributes, which contains 398 instances. Attributes for each instance  
+1. mpg: continuous 
+2. cylinders: multi-valued discrete 
+3. displacement: continuous 
+4. horsepower: continuous 
+5. weight: continuous 
+6. acceleration: continuous 
+7. model year: multi-valued discrete 
+8. origin: multi-valued discrete 
+9. car name: string (unique for each instance)
 
 
