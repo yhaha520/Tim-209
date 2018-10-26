@@ -27,22 +27,22 @@ Using chemical analysis determine the origin of wines, contains 178 instances. A
 Output varibable:
 12. quality (score between 0 and 10)  
 
-## 3. Wine_Quality_data
-http://archive.ics.uci.edu/ml/datasets/Wine+Quality  
-I pick up red wine quality data, which has 1599 instances. Attributes for each instance  
-1. fixed acidity
-2. volatile acidity
-3. citric acid
-4. residual sugar
-5. chlorides
-6. free sulfur dioxide
-7. total sulfur dioxide
-8. density
-9. pH
-10. sulphates
-11. alcohol  
+## 3. Breast_Cancer_Coimbra data
+http://archive.ics.uci.edu/ml/datasets/Breast+Cancer+Coimbra  
+Clinical features were observed or measured for 64 patients with breast cancer and 52 healthy controls, 
+which in total 114 instances. Attributes for each instance  
+1. Age (years) 
+2. BMI (kg/m2) 
+3. Glucose (mg/dL) 
+4. Insulin (µU/mL) 
+5. HOMA 
+6. Leptin (ng/mL) 
+7. Adiponectin (µg/mL) 
+8. Resistin (ng/mL) 
+9. MCP-1(pg/dL)   
 Output variable: 
-12. quality (score between 0 and 10)
+10. classification label   
+1=Healthy controls 2=Patients
 
 ## 4. diabetes_data
 https://www4.stat.ncsu.edu/~boos/var.select/diabetes.html  
