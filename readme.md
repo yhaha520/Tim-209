@@ -1,6 +1,5 @@
 # TIM-209 warm-up project
 
-# 6 Datasets
 ## 1. Iris_data
 http://archive.ics.uci.edu/ml/datasets/Iris  
 The classic classification dataset, contains 150 instances. Attributes for each instances  
@@ -53,12 +52,12 @@ This is scikit-learn linear regression test dataset, which contains 442 instance
 3. body mass index
 4. average blood pressure  
 5-10. six blood serum measurements  
-Output variable
+Output variable  
 11. Y - quantitative measure of disease progression  
 
 ## 5. auto_mpg data
 http://archive.ics.uci.edu/ml/datasets/Auto+MPG  
-The data concerns city-cycle fuel consumption in miles per gallon, to be predicted in terms of 3 multivalued discrete and 5 continuous attributes, which contains 398 instances. Attributes for each instance  
+The data concerns city-cycle fuel consumption in miles per gallon, to be predicted in terms of 3 multivalued discrete and 5 continuous attributes, which contains 398 instances, what we need to predict is mpg value. Attributes for each instance  
 1. mpg: continuous 
 2. cylinders: multi-valued discrete 
 3. displacement: continuous 
@@ -68,5 +67,17 @@ The data concerns city-cycle fuel consumption in miles per gallon, to be predict
 7. model year: multi-valued discrete 
 8. origin: multi-valued discrete 
 9. car name: string (unique for each instance)
+
+## 6. airfoil self-noise data
+http://archive.ics.uci.edu/ml/datasets/Airfoil+Self-Noise  
+NASA data set, obtained from a series of aerodynamic and acoustic tests of two and three-dimensional airfoil blade sections conducted in an anechoic wind tunnel, which contains 1503 instances. Attributes for each instance
+1. Frequency, in Hertzs  
+2. Angle of attack, in degrees   
+3. Chord length, in meters  
+4. Free-stream velocity, in meters per second   
+5. Suction side displacement thickness, in meters   
+The only output is:   
+6. Scaled sound pressure level, in decibels 
+
 
 
