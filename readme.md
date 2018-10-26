@@ -1,4 +1,4 @@
-# TIM-209 warm-up project
+# TIM-209 Warm-Up Project
 
 ## 1. Iris_data
 http://archive.ics.uci.edu/ml/datasets/Iris  
