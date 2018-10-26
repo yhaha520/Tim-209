@@ -25,8 +25,25 @@ Using chemical analysis determine the origin of wines, contains 178 instances. A
 9. pH   
 10. sulphates   
 11. alcohol   
-Output variable (based on sensory data):   
+Output
 12. quality (score between 0 and 10)  
+
+## 3. Wine_Quality_data
+http://archive.ics.uci.edu/ml/datasets/Wine+Quality  
+I pick up red wine quality data, which has 1599 instances. Attributes for each instances  
+1. fixed acidity
+2. volatile acidity
+3. citric acid
+4. residual sugar
+5. chlorides
+6. free sulfur dioxide
+7. total sulfur dioxide
+8. density
+9. pH
+10. sulphates
+11. alcohol
+Output variable (based on sensory data): 
+12. quality (score between 0 and 10)
 
 
 
