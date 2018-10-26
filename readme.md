@@ -7,7 +7,7 @@ The classic classification dataset, contains 150 instances. Attributes for each 
 2. sepal width in cm 
 3. petal length in cm 
 4. petal width in cm  
-Output
+Output:
 5. class:  -- Iris Setosa  -- Iris Versicolour  -- Iris Virginica
 
 ## 2. Wine_data
@@ -24,7 +24,7 @@ Using chemical analysis determine the origin of wines, contains 178 instances. A
 9. pH   
 10. sulphates   
 11. alcohol   
-Output varibable
+Output varibable:
 12. quality (score between 0 and 10)  
 
 ## 3. Wine_Quality_data
@@ -52,7 +52,7 @@ This is scikit-learn linear regression test dataset, which contains 442 instance
 3. body mass index
 4. average blood pressure  
 5-10. six blood serum measurements  
-Output variable  
+Output variable:  
 11. Y - quantitative measure of disease progression  
 
 ## 5. auto_mpg data
@@ -76,7 +76,7 @@ NASA data set, obtained from a series of aerodynamic and acoustic tests of two a
 3. Chord length, in meters  
 4. Free-stream velocity, in meters per second   
 5. Suction side displacement thickness, in meters   
-The only output is:   
+The only output:   
 6. Scaled sound pressure level, in decibels 
 
 
