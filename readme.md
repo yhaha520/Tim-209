@@ -1,7 +1,7 @@
 # TIM-209 warm-up project
 
 # 6 Datasets
-## 1.iris_data
+## 1. Iris_data
 http://archive.ics.uci.edu/ml/datasets/Iris
 The classic classification dataset, contains 150 instances.
 Attributes for each instances
@@ -12,9 +12,10 @@ Attributes for each instances
 Output
 5. class:  -- Iris Setosa  -- Iris Versicolour  -- Iris Virginica
 
-## 2.wine_data
+## 2. Wine_data
 http://archive.ics.uci.edu/ml/datasets/Wine+Quality
-Using chemical analysis determine the origin of wines， contains 178 instances.
+Using chemical analysis determine the origin of wines, contains 178 instances.
+
 Attributes for each instances
 1 - fixed acidity 
 2 - volatile acidity 
