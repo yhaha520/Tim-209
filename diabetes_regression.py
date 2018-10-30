@@ -51,7 +51,7 @@ for i in range(1, k+1):  # each time in cv
     regba = linear_model.BayesianRidge()
     regba.fit(x_train,y_train)
     diabetes_Bayesian = regba.predict(x_test)
-    ave_Bayesian_mse += mean_squared_error(y_test,diabetes_Bayesian)
+    ave_Bayesian_mse += mean_squared_error(y_test, diabetes_Bayesian)
 
     # # Plot outputs  (only works for 1-dimensional data)
     # plt.scatter(x_test, y_test,  color='black')
@@ -59,6 +59,7 @@ for i in range(1, k+1):  # each time in cv
     # plt.xticks(())
     # plt.yticks(())
     # plt.show()
+
 print("LR Mean squared error is:", ave_LR_mse/k)
-print("Lasso Mean squared error is:", ave_Lasso_mse)
-print("Bayesian Regression Mean squared error is:", ave_Bayesian_mse)
+print("Lasso Mean squared error is:", ave_Lasso_mse/k)
+print("Bayesian Regression Mean squared error is:", ave_Bayesian_mse/k)

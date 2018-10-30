@@ -53,8 +53,8 @@ for i in range(1, k+1):  # each time in cv
     ave_Bayesian_mse += mean_squared_error(y_test,diabetes_Bayesian)
 
 print("LR Mean squared error is:", ave_LR_mse/k)
-print("Lasso Mean squared error is:", ave_Lasso_mse)
-print("Bayesian Regression Mean squared error is:", ave_Bayesian_mse)
+print("Lasso Mean squared error is:", ave_Lasso_mse/k)
+print("Bayesian Regression Mean squared error is:", ave_Bayesian_mse/k)
 
 
 
